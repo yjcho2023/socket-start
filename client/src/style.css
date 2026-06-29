@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 전체 페이지 폰트 적용 (나눔스퀘어 네오) */
+@font-face {
+  font-family: 'NanumSquareNeo';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix)
+      format('embedded-opentype'),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff)
+      format('woff'),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf)
+      format('truetype');
+}
+
+body {
+  font-family: 'NanumSquareNeo', sans-serif;
+}
+
+/* sidebar */
+.accordion {
+  @apply flex flex-row items-center;
+}
+
+.graphBtn {
+  border-radius: 8px;
+  border: 1px solid gray;
+  font-size: 14px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* item card */
+#itemcard {
+  min-width: 260px;
+}
+
+/* input form */
+.input-container {
+  @apply flex flex-row items-center my-2;
+  min-width: 500px;
+}
+
+.label {
+  @apply w-1/4 text-right;
+}
+
+.input-field {
+  @apply px-2 py-1 mx-2 rounded-md border border-slate-400;
+  width: 400px;
+}
+
+/* profile */
+.profile-btn {
+  @apply p-2 ml-1 border border-slate-300 rounded-md text-sm;
+}
