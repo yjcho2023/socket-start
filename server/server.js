@@ -8,7 +8,7 @@ const path = require('path');
 
 const app = express(); // 인스턴스 생성
 
-const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = ['http://localhost:5173'];
 app.use(
   cors({
     origin: allowedOrigins,
@@ -33,11 +33,11 @@ const io = socketIo(server, {
 });
 
 // 정적 파일 서빙
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
-// React의 기본 index.html 반환 설정
+// React의 기본 index.html 반환 설정 (vite)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 });
 
 // 클라이언트와 연결
