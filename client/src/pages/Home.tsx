@@ -8,7 +8,7 @@ export default function Home() {
   const [nickname, setNickname] = useState(''); // 닉네임 상태관리
 
   // 닉네임 설정 핸들러 함수
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNickname(e.target.value);
   };
 
